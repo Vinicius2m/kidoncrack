@@ -1,0 +1,17 @@
+{
+  "name": "kidoncrack",
+  "version": "1.0.0",
+  "description": "yaa",
+  "main": "index.js",
+  "author": "Vinicius2m",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.28.0"
+  },
+  "scripts": {
+      "start": "node index.js"
+  },
+  "bin": {
+    "kidoncrack": "./index.js"
+  }
+}
