@@ -5,11 +5,9 @@
   "main": "index.js",
   "author": "Vinicius2m",
   "license": "MIT",
-  "dependencies": {
-    "ramda": "^0.28.0"
-  },
+  "dependencies": {},
   "scripts": {
-      "start": "node index.js"
+    "start": "node index.js"
   },
   "bin": {
     "kidoncrack": "./index.js"

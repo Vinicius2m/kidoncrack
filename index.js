@@ -1,14 +1,11 @@
-// #!/usr/bin/env node
 const exect = require('child_process').exec;
 const path = require('path');
 const fs = require('fs');
 
-const R = require('ramda');
-
 const mainPath = path.dirname(fs.realpathSync(__filename));
 const soundPath = path.join(mainPath, './kidoncrack');
 
-const kidoncrack = function () {
+const kidoncrack = () => {
   const linuxcmd = `paplay ${soundPath}.ogg`;
   const windowscmd =
     path.join(mainPath, './forWindows.vbs') + ' ' + soundPath + '.mp3';
@@ -18,9 +15,11 @@ const kidoncrack = function () {
 
   if (platform === 'linux') {
     return exec(linuxcmd);
-  } else if (platform === 'win32') {
+  }
+  if (platform === 'win32') {
     return exec(windowscmd);
-  } else if (platform === 'darwin') {
+  }
+  if (platform === 'darwin') {
     return exec(maccmd);
   }
 
